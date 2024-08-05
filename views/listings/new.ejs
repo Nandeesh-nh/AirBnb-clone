@@ -1,0 +1,83 @@
+<% layout("./layouts/boilerplate") %>
+<script>
+    const token = "<%= process.env.map_api_Key %>";
+</script>
+    <body>
+        <h3 class = "t-heading">Enter the details of the new location</h3>
+        <div class="row new-row">
+            <div class="col-8 ">
+            <form class="needs-validation" novalidate method="post" action="/listings" enctype="multipart/form-data">
+                <div class = "mb-2">
+                    <label class = "form-label" for="title">Title</label>
+                    <input name="title" placeholder="Enter title" type="text" class="form-control" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please enter a title.
+                    </div>
+                </div>
+                <div class = "mb-2">
+                    <label class = "form-label" for="description">Description</label>
+                    <textarea name="description" placeholder="Enter description" class = "form-control" required></textarea>
+                </div>
+                <div class = "mb-2">
+                    <label class = "form-label" for="image">Upload Image</label>
+                    <input class="form-control" name="image" placeholder="Enter Image URL" type="file">
+                    
+                </div>
+                <div class="mb-2">
+                    <label  class = "form-label" for="category">Select a Category</label>
+        <select class="form-control" id="category" name="category" required>
+            <option value="">select here</option>
+            <option value="trending">Trending</option>
+            <option value="family">Family</option>
+            <option value="beachside">Beachside</option>
+            <option value="pet-friendly">Pet Friendly</option>
+            <option value="cityescape">CityEscape</option>
+            <option value="countryside">Countryside</option>
+            <option value="adventure">Adventure</option>
+            <option value="budget-stays">Budget Stays</option>
+            <option value="luxury">Luxury</option>
+            <option value="unique-stays">Unique Stays</option>
+            <option value="skiing">Skiing</option>
+            <option value="romantic">Romantic</option>
+            <option value="eco-friendly">Eco-Friendly</option>
+            <option value="nightlife">Nightlife</option>
+        </select>
+        <div class="invalid-feedback">
+            Please Select a category.
+        </div>
+        
+                </div>
+                <div class="row mb-2">
+                    <div class = "col-sm-4">
+                    <label class = "form-label" for="price">Price</label>
+                    <input class="form-control" name="price" placeholder="Enter Price in Rupees" type="number" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid price, Price should be atleast 1.
+                    </div>
+                </div>
+                <div class = "col-md-8 mb-2">
+                    <label class = "form-label" for="country">Country</label>
+                    <input class="form-control" name="country" placeholder="Enter Country" type="text" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid country.
+                    </div>
+                </div>
+                </div>
+                
+                <div class = "mb-2">
+                    <label class = "form-label" for="location">Location</label>
+                    <input class="form-control" name="location" placeholder="Enter Location" type="text" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid location.
+                    </div>
+                </div>
+                <br>
+                <button class = "btn btn-danger">Add</button>
+            </form>
+          </div>
+        </div>
+        <script src="/js/form.js"></script>
+    </body>

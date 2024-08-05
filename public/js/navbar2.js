@@ -1,0 +1,20 @@
+// Slider version 1
+$('.owl-carousel.version-1').owlCarousel({
+    loop:false,
+    margin:10,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:3,
+            nav:true
+        },
+        600:{
+            items:6,
+            nav:true
+        },
+        1000:{
+            items:10,
+            nav:true
+        }
+    }
+});

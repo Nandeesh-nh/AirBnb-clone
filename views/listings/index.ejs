@@ -1,0 +1,26 @@
+<% layout("./layouts/boilerplate") %>
+<body>
+  
+  <div>
+    <%- include("../includes/navbar2.ejs") %>
+    <!-- <hr style = "margin : 0px"> -->
+</div>
+    
+ 
+  <h2 style="text-align: center; margin-top : 0.8rem; margin-bottom: 0.5rem; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">All listing</h2>
+   <div class="row row-cols-lg-3 row-cols-md-2  row-cols-sm-1 index-row">
+        <% for(let ele of value){ %> 
+                <div class="card index-card listing-card" style="width: 19rem;">
+                <img src="<%= ele.image.url%>" class="card-img-top listing-img aspect-ratio-4x3" alt="listing-image">
+                <a href = "/listings/<%= ele._id %>" class = "listing-link"><div class="card-img-overlay"></div></a>
+                <div class="card-body listing-card-body">
+                  <p class="card-text index-text">
+                    <b><%= ele.title %></b>  <br>
+                    ₹&nbsp;<%=ele.price.toLocaleString('en-IN')%>/night
+                  </p>
+                </div>
+              </div> 
+        <% } %>  
+        
+    </div>
+</body>

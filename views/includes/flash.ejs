@@ -1,0 +1,30 @@
+
+<% if(success && success.length) {  %>
+<div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
+    <%= success %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<%}%>
+<% if(error && error.length) {  %>
+    <div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
+        <%= error%>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <%}%>
+
+    <script>
+      // Function to hide flash messages after 4 seconds
+      function autoHideFlashMessages() {
+        const flashMessages = document.querySelectorAll('.alert');
+        setTimeout(() => {
+          flashMessages.forEach(msg => {
+            // Use Bootstrap's alert class methods to hide the alert
+            const alert = new bootstrap.Alert(msg);
+            alert.close();
+          });
+        }, 6000);
+      }
+    
+      // Call the function to hide flash messages automatically
+      autoHideFlashMessages();
+    </script>

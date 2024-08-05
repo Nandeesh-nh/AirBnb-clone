@@ -1,0 +1,83 @@
+<% layout("./layouts/boilerplate") %>
+<body>
+
+    <h3 class = "t-heading">Edit your information here </h3>
+    <div class="row new-row">
+    <div class="col-8">
+
+   
+    <form class = "needs-validation" novalidate enctype="multipart/form-data" method="post" action = "/listings/<%= val._id %>?_method=PUT">
+        <div class="mb-2">
+            <label for="title" class = "form-label">Title</label>
+            <input name = "title" value = "<%= val.title %>" type="text" class = form-control required>
+            <div class="invalid-feedback">
+                Please provide a title.
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class = "form-label">Description</label>
+            <textarea name="description" class = "form-control" required><%=val.description%> </textarea>
+            <div class="invalid-feedback">
+                Please provide a description.
+            </div>
+        </div>
+        <div class="preview mb-2">
+           <img src="<%=reducedImage%>">
+        </div>
+        <div class="mb-2">
+            <label class = "form-label" for="image">Upload New Image</label>
+            <input class = "form-control" name = "image" type="file">
+        </div>
+        <div class="mb-2">
+            <label class="form-label" for="category">Select a Category</label>
+            <select class="form-control" id="category" name="category" required>
+                <option value="">Select here</option>
+                <option value="trending" <%= val.category === 'trending' ? 'selected' : '' %>>Trending</option>
+                <option value="family" <%= val.category === 'family' ? 'selected' : '' %>>Family</option>
+                <option value="beachside" <%= val.category === 'beachside' ? 'selected' : '' %>>Beachside</option>
+                <option value="pet-friendly" <%= val.category === 'pet-friendly' ? 'selected' : '' %>>Pet Friendly</option>
+                <option value="cityescape" <%= val.category === 'cityescape' ? 'selected' : '' %>>CityEscape</option>
+                <option value="countryside" <%= val.category === 'countryside' ? 'selected' : '' %>>Countryside</option>
+                <option value="adventure" <%= val.category === 'adventure' ? 'selected' : '' %>>Adventure</option>
+                <option value="budget-stays" <%= val.category === 'budget-stays' ? 'selected' : '' %>>Budget Stays</option>
+                <option value="luxury" <%= val.category === 'luxury' ? 'selected' : '' %>>Luxury</option>
+                <option value="unique-stays" <%= val.category === 'unique-stays' ? 'selected' : '' %>>Unique Stays</option>
+                <option value="skiing" <%= val.category === 'skiing' ? 'selected' : '' %>>Skiing</option>
+                <option value="romantic" <%= val.category === 'romantic' ? 'selected' : '' %>>Romantic</option>
+                <option value="eco-friendly" <%= val.category === 'eco-friendly' ? 'selected' : '' %>>Eco-Friendly</option>
+                <option value="nightlife" <%= val.category === 'nightlife' ? 'selected' : '' %>>Nightlife</option>
+            </select>
+            
+<div class="invalid-feedback">
+    Please Select a category.
+</div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-md-4">
+            <label class = "form-label" for="price">Price</label>
+            <input class = "form-control" name = "price" value = "<%= val.price %>" min="1" type="Number" required>
+            <div class="invalid-feedback">
+                Please provide a valid price.
+            </div>
+        </div>
+        <div class ="col-md-8">
+            <label class = "form-label" for="country">Country</label>
+            <input class = "form-control" name = "country" value = "<%= val.country %>" type="text" required>
+            <div class="invalid-feedback">
+                Please provide a valid country.
+            </div>
+        </div>
+        </div>
+        
+        <div class="mb-2">
+            <label class = "form-label" for="location">Location</label>
+            <input class = "form-control" name = "location" value = "<%=  val.location %>" type="text" required>
+            <div class="invalid-feedback">
+                Please provide a valid location.
+            </div>
+        </div>
+        <button class="btn btn-danger">edit</button>
+    </form> </div>
+</div>
+<script src="/js/form.js"></script>
+</body>

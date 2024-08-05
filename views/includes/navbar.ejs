@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-md navbar-light bg-white border-bottom sticky-top">
+  <div class="container-fluid " style="text-align:center;">
+    <a class="navbar-brand" href="/listings">
+      <i class="fa-regular fa-compass"></i>
+      <div class="tagname">
+        <h4>Airbnb</h4>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav nav-box ml-1">
+        <a class="nav-item nav-link middle" href="/listings">Explore</a>
+        <a class="nav-item nav-link last" href="/listings/new">Add New Listings</a>
+      </div>
+      <div class="navbar-nav  mx-auto">
+        <form class="d-flex search-box" method = "post" action = "/listings/search" role="search">
+          <input class="form-control" type="search" name = "search" placeholder="Search category(case-sensitve)" aria-label="Search">
+          <button class="btn btn-danger" type="submit">Search</button>
+        </form>
+    </div>
+      <div class="navbar-nav ms-auto me-3 nav-bar">
+        
+        <div class="btn-group nav-item row ">
+          <button type="button" class="btn btn-danger dropdown-toggle nav-login" data-bs-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i> <i class="fa-solid fa-user"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-end dropdown-info">
+            <% if(!user) { %>
+              <a class="dropdown-item" href="/login">Login</a>
+              <a class="dropdown-item" href="/signup">SignUp</a>
+              <% } else { %>
+                <a class="dropdown-item" href="/logout">Logout</a>
+                <% } %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

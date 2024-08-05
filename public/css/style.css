@@ -1,0 +1,164 @@
+/* body */ 
+body {
+    display : flex;
+    flex-direction : column;
+    min-height : 100vh;
+}
+
+.contains {
+    flex : 1;
+}
+.t-heading {
+    text-align: center;
+    display : inline-block;
+    width : 100%;
+}
+/* navbar */
+.navbar {
+    padding-top:0.7rem !important;
+    padding-bottom:0.7rem !important;
+    margin-bottom: 15px;
+}
+.navbar-brand {
+    text-align: center;
+    height : 100%;
+    vertical-align: center;
+}
+.navbar-brand > i {
+    text-align: center;
+    display: inline-block;
+    margin-left: 7px;
+}
+.tagname {
+    display : inline-block;
+    color : #fe424d;
+    text-align : center;
+   vertical-align: bottom;
+    margin-left : 1px;
+    height : 100%;
+}
+.tagname h4 {
+    font-weight : bold;
+    font-size : 1.5rem;
+    vertical-align: middle;
+    margin-bottom : 6px !important ;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.fa-compass {
+    color : #fe424d;
+   font-size : 2.2rem;
+}
+.nav-link {
+    color: #222222 !important;
+    font-size: 1rem;
+   
+}
+.nav-login > i {
+    margin-left : 8px !important;
+
+}
+.nav-login {
+    border-radius: 50px !important;
+}
+.dropdown-info>a {
+    text-align : center;
+}
+.search-box {
+    max-width : 75% !important;
+    align-items : center !important;
+}
+.search-box>button {
+    margin-left : 3px;
+    font-weight: 600;
+}
+
+
+/* footer */
+.f-info {
+    display : flex;
+    flex-direction: column;
+    justify-content : center;
+    align-items : center;
+    background-color: aquamarine;
+    padding : 15px 0px 20px 0px;
+    margin-top : 35px;
+
+}
+
+.f-social > i {
+    font-size : 1.2rem;
+    cursor: pointer;
+    margin : 0.4rem;
+}
+.f-terms > a {
+    text-decoration: none;
+    color : black;
+    margin-left : 4px;
+}
+.f-terms > a:hover {
+    text-decoration: underline;
+}
+
+
+/* index route */ 
+.index-row {
+    justify-content: space-evenly !important;
+}
+.card-img-top {
+    width : 100% !important;
+    height: 17.7rem !important;
+    border-radius: 10px !important;
+    object-fit: cover !important;
+
+}
+.listing-card {
+    padding : 0px !important;
+    border : none !important;
+    margin-bottom: 25px;
+}
+.listing-img{
+    opacity: 1;
+
+}
+.listing-card-body {
+    padding : 2px 0px 4px 2px !important;
+}
+.index-card:hover {
+    background-color: white;
+    opacity : 0.7;
+}
+
+/* new listing */
+.new-row {
+    justify-content: space-evenly;    
+}
+
+
+/* show route */
+.show-info {
+    display : flex;
+    flex-direction : column;
+    justify-content: center;
+    
+}
+.show-img {
+    
+    object-fit: cover !important ;
+    background-size: cover !important ;
+    background-position: center !important ;
+    background-repeat: no-repeat !important ;
+    align-content: center;
+}
+
+
+.show-card{
+    width : 100% !important;
+}
+
+
+/* mapapi */
+
+#map {
+    height : 300px;
+    width : 95%;
+}

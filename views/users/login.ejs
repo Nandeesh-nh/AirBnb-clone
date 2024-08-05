@@ -1,0 +1,24 @@
+<% layout("./layouts/boilerplate") %>
+
+<div class = "row">
+   
+<div class = "col-6 offset-3">
+     <h3 class ="col-6 offset-3 mb-1 mt-2" >Login on Wanderlust</h3>
+    <form class = "needs-validation" action="/login" method = "post" novalidate>
+        <div class = "mt-2">
+            <label class = "form-label" for="username">Username</label>
+            <input class = "form-control" name = "username" type="text" required>
+        </div>
+        <div class = "mt-2">
+            <label class = "form-label" for="password">Password</label>
+            <input class = "form-control" name = "password" type="password" required>
+        </div>
+        <div class = "mt-2">
+            <button class = "btn btn-dark">Login</button  >
+        </div>
+          
+        
+    </form>
+    <script src="/js/form.js"></script>
+</div>
+</div>

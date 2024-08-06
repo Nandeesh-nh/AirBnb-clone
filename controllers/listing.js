@@ -47,13 +47,16 @@ module.exports.newRoute = async (req,res)=>{
 module.exports.postNewRoute = async (req,res,next)=>{
     let {title,description,image,price,location,country,category} = req.body;
     // in an async function, or as a 'thenable':
-   
+    console.log(req.body);
+    console.log(req.user);
+    console.dir(req.file):
     let url = req.file.path;
     let filename = req.file.filename;
 let demo = new Listing({title,description,image,price,location,country,category});
 demo.owner = req.user._id;
 demo.image = {url,filename};
 demo.geometry = await forwardGeocode(location + " " + country);
+    console.log(demo);
 await demo.save();
 req.flash("success","New Listing is added")
 res.redirect("/listings");

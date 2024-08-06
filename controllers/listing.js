@@ -111,7 +111,7 @@ module.exports.deleteRoute = async (req,res)=>{
     if(!val){
         next(new ExpressError("not found id",404))
     }
-    req.flash("success","Deleted listing successfully")
+    // req.flash("success","Deleted listing successfully")
     res.redirect("/listings");
 }
 

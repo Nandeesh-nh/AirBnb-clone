@@ -1,9 +1,5 @@
 <% layout("./layouts/boilerplate") %>
-    <script>
-        const token = "<%= process.env.map_api_Key %>";
-        const longitute = "<%= val.geometry.coordinates[0] %>";
-        const latitude = "<%= val.geometry.coordinates[1] %>";
-    </script>
+    
     <link rel="stylesheet" href="/css/rating.css">
 
     <body>
@@ -119,10 +115,7 @@
                                         <hr>
                                     </div>
                                 <% } %>
-                                    <div class = "w-100">
-                                        <h3 class="mb-2">Map for the Location</h3>
-                                        <div id="map"></div>
-                                    </div>
+                                    
             </div>
         </div>
 

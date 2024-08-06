@@ -49,7 +49,7 @@ module.exports.postNewRoute = async (req,res,next)=>{
     // in an async function, or as a 'thenable':
     console.log(req.body);
     console.log(req.user);
-    console.dir(req.file):
+    console.dir(req.file);
     let url = req.file.path;
     let filename = req.file.filename;
 let demo = new Listing({title,description,image,price,location,country,category});

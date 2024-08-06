@@ -104,6 +104,7 @@ app.all("*",(req,res,next)=>{
 })
 
 app.use((err,req,res,next)=>{
+    console.log(err.stack);
     let{status=500,message="some error"} = err;
     res.status(status).render("errors/error.ejs",{err});
 })

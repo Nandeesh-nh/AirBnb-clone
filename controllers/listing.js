@@ -53,8 +53,8 @@ module.exports.postNewRoute = async (req,res,next)=>{
 let demo = new Listing({title,description,image,price,location,country,category});
 demo.owner = req.user._id;
 demo.image = {url,filename};
-demo.geometry = await forwardGeocode(location + " " + country);
-    console.log(demo);
+// demo.geometry = await forwardGeocode(location + " " + country);
+//     console.log(demo);
 await demo.save();
 req.flash("success","New Listing is added")
 res.redirect("/listings");
